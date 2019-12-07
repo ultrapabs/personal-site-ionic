@@ -1,9 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content></ion-content>
+<app-header-bar [pageTitle]="pageTitle"></app-header-bar>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Upcoming races and past results</ion-card-subtitle>
+    </ion-card-header>
+    <ion-list lines="none">
+      <ng-container *ngFor="let race of raceList; let idx = index">
+        <ion-item *ngIf="showMore || idx < 5">
+          <ion-label *ngIf="!isMobile()">
+            <span class="race-browser-date">{{race.date}}</span>
+            <span class="race-browser-name">{{race.name}}</span>
+            <span class="race-browser-time">{{race.time}}</span>
+          </ion-label>
+          <ion-label *ngIf="isMobile()">
+            <ion-text>
+              <p>{{race.name}}</p>
+              <p>
+                <span class="race-mobile-date">{{race.date}}</span>
+                <span class="race-mobile-time">{{race.time}}</span>
+              </p>
+            </ion-text>
+          </ion-label>
+          <ion-button slot="end" color="medium" href="{{race.url}}" target="_blank">
+            <ion-icon name="link">
+            </ion-icon>
+          </ion-button>
+        </ion-item>
+      </ng-container>
+    </ion-list>
+    <ion-button *ngIf="!showMore"
+                size="small"
+                color="primary"
+                expand="block"
+                (click)="expandList()">
+      Show More
+    </ion-button>
+    <img src="/assets/img/manhattan.jpg" alt="Photo by John Benitez" />
+  </ion-card>
+</ion-content>

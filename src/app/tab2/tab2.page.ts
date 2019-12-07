@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { RaceService } from '../service/race.service';
+import { Race } from '../model/race';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +10,25 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  pageTitle: string = 'Running';
+  raceList: Race[];
+  showMore: boolean;
 
+  constructor(
+    private platform: Platform,
+    private raceService: RaceService
+  ) {}
+
+  ngOnInit() {
+    this.raceList = this.raceService.getRaces();
+    this.showMore = false;
+  }
+
+  isMobile() {
+    return this.platform.is('mobile');
+  }
+
+  expandList() {
+    this.showMore = true;
+  }
 }

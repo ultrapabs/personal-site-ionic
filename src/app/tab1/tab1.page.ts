@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  pageTitle: string = 'Paul Banel';
+
   constructor() {}
 
 }

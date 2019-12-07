@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{pageTitle}}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngFor="let link of headerLinks" color="tertiary" href="{{link.url}}" target="_blank">
+        <ion-icon name="logo-{{link.icon}}">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

@@ -1,41 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab One
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<app-header-bar [pageTitle]="pageTitle"></app-header-bar>
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+    <ion-card>
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-card-subtitle>I am an ultra runner and software developer based in Boulder, CO</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+        <p>
+          I train with the
+          <a href="http://www.runboulder.org/" target="_blank">Run Boulder Athletic Club</a>
+          under
+          <a href="http://www.kathy-butler.com/" target="_blank">Kathy Butler</a>
+          and with
+          <a href="http://www.kpperformanceboulder.com/" target="_blank">Kevin Purvis</a>.
+          When I'm not running, I'm helping reduce energy use by making buildings
+          more efficient as a Front End Developer at
+          <a href="http://www.brightpower.com/" target="_blank">Bright Power</a>.
+        </p>
       </ion-card-content>
+      <img src="/assets/img/escca.jpg" alt="Photo by Nate Dunn" />
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
 </ion-content>

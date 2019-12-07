@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HeaderLink } from '../model/header-link';
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+  selector: 'app-header-bar',
+  templateUrl: './header-bar.component.html',
+  styleUrls: ['./header-bar.component.scss'],
 })
-export class TabsPage {
+export class HeaderBarComponent {
 
+  @Input() pageTitle: string;
   headerLinks: HeaderLink[] = [
     new HeaderLink('https://www.linkedin.com/in/paulbanel/', 'linkedin'),
     new HeaderLink('https://www.github.com/ultrapabs/', 'github'),
