@@ -1,7 +1,6 @@
 # TODO
 
 [] unit tests
-[] theme colors
 [] projects, races to json
 [] deploy
 [] https
