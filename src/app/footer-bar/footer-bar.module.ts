@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
-import { HeaderBarComponent } from './header-bar.component';
+import { FooterBarComponent } from './footer-bar.component';
 
 @NgModule({
   imports: [
@@ -10,10 +10,10 @@ import { HeaderBarComponent } from './header-bar.component';
     IonicModule
   ],
   declarations: [
-    HeaderBarComponent
+    FooterBarComponent
   ],
   exports: [
-    HeaderBarComponent
+    FooterBarComponent
   ]
 })
-export class HeaderBarModule {}
+export class FooterBarModule {}
