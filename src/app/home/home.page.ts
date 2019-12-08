@@ -3,11 +3,11 @@ import { Platform } from '@ionic/angular';
 import { RedirectService } from '../service/redirect.service';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss']
 })
-export class Tab1Page implements OnInit {
+export class HomePage implements OnInit {
 
   pageTitle: string = 'Paul Banel';
   descText: string = 'I am an ultra runner and software developer based in Boulder, CO';

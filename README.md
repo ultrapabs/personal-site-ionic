@@ -1,9 +1,6 @@
 # TODO
 
-[] rename tabs pages
-[] update tabs routes
 [] unit tests
-[] redirect index pages
 [] theme colors
 [] projects, races to json
 [] deploy

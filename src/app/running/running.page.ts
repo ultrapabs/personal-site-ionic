@@ -5,11 +5,11 @@ import { Race } from '../model/race';
 import { RaceFilterPipe } from '../pipe/race-filter.pipe';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-running',
+  templateUrl: 'running.page.html',
+  styleUrls: ['running.page.scss']
 })
-export class Tab2Page {
+export class RunningPage {
 
   pageTitle: string = 'Running';
   descText: string = 'Upcoming races and past results';

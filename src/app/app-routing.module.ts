@@ -9,15 +9,15 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: './tab1/tab1.module#Tab1PageModule'
+    loadChildren: './home/home.module#HomePageModule'
   },
   {
     path: 'running',
-    loadChildren: './tab2/tab2.module#Tab2PageModule'
+    loadChildren: './running/running.module#RunningPageModule'
   },
   {
     path: 'projects',
-    loadChildren: './tab3/tab3.module#Tab3PageModule'
+    loadChildren: './projects/projects.module#ProjectsPageModule'
   }
 ];
 @NgModule({

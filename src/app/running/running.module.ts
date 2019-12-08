@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab2Page } from './tab2.page';
+import { RunningPage } from './running.page';
 import { HeaderBarModule } from '../header-bar/header-bar.module';
 import { RaceFilterPipe } from '../pipe/race-filter.pipe';
 
@@ -13,11 +13,11 @@ import { RaceFilterPipe } from '../pipe/race-filter.pipe';
     CommonModule,
     FormsModule,
     HeaderBarModule,
-    RouterModule.forChild([{ path: '', component: Tab2Page }])
+    RouterModule.forChild([{ path: '', component: RunningPage }])
   ],
   declarations: [
     RaceFilterPipe,
-    Tab2Page
+    RunningPage
   ]
 })
-export class Tab2PageModule {}
+export class RunningPageModule {}

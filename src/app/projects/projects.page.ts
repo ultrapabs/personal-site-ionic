@@ -4,11 +4,11 @@ import { Project } from '../model/project';
 import { Platform } from '@ionic/angular';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-projects',
+  templateUrl: 'projects.page.html',
+  styleUrls: ['projects.page.scss']
 })
-export class Tab3Page implements OnInit {
+export class ProjectsPage implements OnInit {
 
   pageTitle: string = 'Projects';
   descText: string = 'Some past projects I\'ve created';

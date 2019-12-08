@@ -30,9 +30,7 @@ export class RedirectService {
     if (!this.alreadyRedirected) {
       this.activatedRoute.queryParams.subscribe(params => {
         let redirectPath = params['redirect'];
-        console.log('hi');
-        console.log(params);
-        console.log(redirectPath);
+
         if (redirectPath != null && this.allowedRoutes.indexOf(redirectPath) > -1) {
           this.router.navigate(['/' + redirectPath]);
           this.alreadyRedirected = true;
