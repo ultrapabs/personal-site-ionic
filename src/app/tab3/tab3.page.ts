@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../service/project.service';
 import { Project } from '../model/project';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
@@ -10,12 +11,20 @@ import { Project } from '../model/project';
 export class Tab3Page implements OnInit {
 
   pageTitle: string = 'Projects';
+  descText: string = 'Some past projects I\'ve created';
   projectList: Project[];
 
-  constructor(private projectService: ProjectService) {}
+  constructor(
+    private platform: Platform,
+    private projectService: ProjectService
+  ) {}
 
   ngOnInit() {
     this.projectList = this.projectService.getProjects();
+  }
+
+  isMobile() {
+    return this.platform.is('mobile');
   }
 
 }

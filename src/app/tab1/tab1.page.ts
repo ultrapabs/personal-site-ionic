@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -8,7 +9,12 @@ import { Component } from '@angular/core';
 export class Tab1Page {
 
   pageTitle: string = 'Paul Banel';
+  descText: string = 'I am an ultra runner and software developer based in Boulder, CO';
 
-  constructor() {}
+  constructor(private platform: Platform) {}
+
+  isMobile() {
+    return this.platform.is('mobile');
+  }
 
 }

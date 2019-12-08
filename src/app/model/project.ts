@@ -1,7 +1,7 @@
 export class Project {
   displayName: string;
   description: string;
-  imageName: string;
+  imagePath: string;
   githubUrl: string;
   liveUrl: string;
   otherUrl: string;
@@ -9,7 +9,7 @@ export class Project {
   constructor(name: string, desc: string, img: string,  github: string, live: string, other: string) {
     this.displayName = name;
     this.description = desc;
-    this.imageName = img;
+    this.imagePath = img;
     this.githubUrl = github;
     this.liveUrl = live;
     this.otherUrl = other;
@@ -24,6 +24,6 @@ export class Project {
   }
 
   hasOther() {
-    this.otherUrl != null;
+    return this.otherUrl != null;
   }
 }

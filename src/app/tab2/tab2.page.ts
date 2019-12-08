@@ -11,6 +11,7 @@ import { Race } from '../model/race';
 export class Tab2Page {
 
   pageTitle: string = 'Running';
+  descText: string = 'Upcoming races and past results';
   raceList: Race[];
   showMore: boolean;
 

@@ -1,19 +1,24 @@
+ion-card {
+  max-width: 800px;
+  margin: auto;
+}
+
 span {
   display: inline-block;
 }
 
 span.race-browser-date {
-  width: 10%;
+  width: 20%;
   text-align: left;
 }
 
 span.race-browser-name {
-  width: 80%;
+  width: 60%;
   text-align: left;
 }
 
 span.race-browser-time {
-  width: 10%;
+  width: 20%;
   text-align: right;
 }
 

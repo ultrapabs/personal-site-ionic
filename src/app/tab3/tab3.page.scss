@@ -1,1 +1,27 @@
+ion-card {
+  max-width: 800px;
+  margin: auto;
+}
 
+h2 > span, h1 > span {
+  display: block;
+  text-align: right;
+  float: right;
+}
+
+h2 > span > a, h1 > span > a {
+  margin-right: 4px;
+}
+
+p {
+  padding-top: 6px;
+}
+
+ion-avatar {
+  --border-radius: 5px;
+}
+
+.big-avatar {
+  height: 100px;
+  width: 100px;
+}
