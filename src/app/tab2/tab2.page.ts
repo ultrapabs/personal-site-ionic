@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { RaceService } from '../service/race.service';
 import { Race } from '../model/race';
+import { RaceFilterPipe } from '../pipe/race-filter.pipe';
 
 @Component({
   selector: 'app-tab2',
@@ -13,7 +14,9 @@ export class Tab2Page {
   pageTitle: string = 'Running';
   descText: string = 'Upcoming races and past results';
   raceList: Race[];
-  showMore: boolean;
+  listExpanded: boolean;
+  filterText: string;
+  initialLength: number =  5;
 
   constructor(
     private platform: Platform,
@@ -22,7 +25,8 @@ export class Tab2Page {
 
   ngOnInit() {
     this.raceList = this.raceService.getRaces();
-    this.showMore = false;
+    this.listExpanded = false;
+    this.filterText = null;
   }
 
   isMobile() {
@@ -30,6 +34,16 @@ export class Tab2Page {
   }
 
   expandList() {
-    this.showMore = true;
+    this.listExpanded = true;
+  }
+
+  showShowMore() {
+    if (this.listExpanded) {
+      return false;
+    } else {
+      let filteredRaceList = new RaceFilterPipe().transform(this.raceList, this.filterText);
+
+      return this.initialLength < filteredRaceList.length;
+    }
   }
 }

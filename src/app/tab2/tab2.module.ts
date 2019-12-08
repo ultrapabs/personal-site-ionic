@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { HeaderBarModule } from '../header-bar/header-bar.module';
+import { RaceFilterPipe } from '../pipe/race-filter.pipe';
 
 @NgModule({
   imports: [
@@ -14,6 +15,9 @@ import { HeaderBarModule } from '../header-bar/header-bar.module';
     HeaderBarModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],
-  declarations: [Tab2Page]
+  declarations: [
+    RaceFilterPipe,
+    Tab2Page
+  ]
 })
 export class Tab2PageModule {}
