@@ -13,6 +13,6 @@ export class Race {
   }
 
   hasResult() {
-    return this.time !== '';
+    return this.time != null && this.time !== '';
   }
 }

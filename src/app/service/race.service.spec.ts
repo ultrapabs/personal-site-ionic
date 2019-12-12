@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RaceService } from './races.service';
+import { RaceService } from './race.service';
 
 describe('RaceService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
@@ -9,4 +9,6 @@ describe('RaceService', () => {
     const service: RaceService = TestBed.get(RaceService);
     expect(service).toBeTruthy();
   });
+
+  // TODO: add tests after json race file created
 });

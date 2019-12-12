@@ -17,6 +17,7 @@ export class RunningPage {
   listExpanded: boolean;
   filterText: string;
   initialLength: number =  5;
+  raceFilterPipe: RaceFilterPipe = new RaceFilterPipe();
 
   constructor(
     private platform: Platform,
@@ -41,7 +42,7 @@ export class RunningPage {
     if (this.listExpanded) {
       return false;
     } else {
-      let filteredRaceList = new RaceFilterPipe().transform(this.raceList, this.filterText);
+      let filteredRaceList = this.raceFilterPipe.transform(this.raceList, this.filterText);
 
       return this.initialLength < filteredRaceList.length;
     }

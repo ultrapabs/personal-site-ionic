@@ -6,13 +6,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RedirectService {
 
-  alreadyRedirected: boolean;
-
   allowedRoutes: string[] = [
     'home',
     'projects',
     'running'
   ];
+  alreadyRedirected: boolean;
 
   constructor(
     private router: Router,
@@ -28,14 +27,16 @@ export class RedirectService {
     //   queryParamsHandling: 'merge'
     // });
     if (!this.alreadyRedirected) {
-      this.activatedRoute.queryParams.subscribe(params => {
-        let redirectPath = params['redirect'];
+      let redirectPath = this.activatedRoute.snapshot.queryParamMap.get('redirect');
 
-        if (redirectPath != null && this.allowedRoutes.indexOf(redirectPath) > -1) {
-          this.router.navigate(['/' + redirectPath]);
-          this.alreadyRedirected = true;
-        }
-      });
+      if (this.isValidRoute(redirectPath)) {
+        this.alreadyRedirected = true;
+        this.router.navigate(['/' + redirectPath]);
+      }
     }
+  }
+
+  isValidRoute(redirectPath: string) {
+    return redirectPath != null && this.allowedRoutes.indexOf(redirectPath) > -1;
   }
 }
