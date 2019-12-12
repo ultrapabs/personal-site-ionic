@@ -14,5 +14,5 @@ Deployed as a static site using [Amazon S3](https://docs.aws.amazon.com/AmazonS3
 
 ### TODO
 
-[] projects, races to json
-[] prettier error page
+* [] projects, races to json
+* [] prettier error page
