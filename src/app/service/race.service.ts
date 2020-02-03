@@ -10,6 +10,8 @@ export class RaceService {
 
   constructor() {
     this.raceList = [
+      new Race('2020-08-22', 'Leadville Trail 100mi', '', 'https://www.leadvilleraceseries.com/run/leadvilletrail100run/'),
+      new Race('2020-06-06', 'North Fork 50mi', '', 'http://www.northfork50.com/'),
       new Race('2020-02-15', 'Black Canyon 100K', '', 'https://aravaiparunning.com/network/blackcanyon/'),
       new Race('2019-12-08', 'California International Marathon', 'DNF', 'https://runsra.org/california-international-marathon/'),
       new Race('2019-11-09', 'Mountain View Trail Half Marathon', '1:25:58', 'https://ultrasignup.com/results_event.aspx?did=68598'),
