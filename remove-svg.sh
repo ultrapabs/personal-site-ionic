@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# remove all svg but pizza, walk, apps, log-instagram, logo-github, logo-linkedin, document, link
+# remove all svg but pizza, walk, apps, logo-instagram, logo-github, logo-linkedin, document, link
 
 rm ./www/svg/ios-add-circle-outline.svg
 rm ./www/svg/ios-add-circle.svg
@@ -338,7 +338,6 @@ rm ./www/svg/logo-google.svg
 rm ./www/svg/logo-googleplus.svg
 rm ./www/svg/logo-hackernews.svg
 rm ./www/svg/logo-html5.svg
-rm ./www/svg/logo-instagram.svg
 rm ./www/svg/logo-ionic.svg
 rm ./www/svg/logo-ionitron.svg
 rm ./www/svg/logo-javascript.svg
