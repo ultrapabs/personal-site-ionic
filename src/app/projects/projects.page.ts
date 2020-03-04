@@ -13,6 +13,7 @@ export class ProjectsPage implements OnInit {
   pageTitle: string = 'Projects';
   descText: string = 'Some past projects I\'ve created';
   projectList: Project[];
+  isMobile: boolean;
 
   constructor(
     private platform: Platform,
@@ -21,10 +22,7 @@ export class ProjectsPage implements OnInit {
 
   ngOnInit() {
     this.projectList = this.projectService.getProjects();
-  }
-
-  isMobile() {
-    return this.platform.is('mobile');
+    this.isMobile = this.platform.is('mobile');;
   }
 
 }

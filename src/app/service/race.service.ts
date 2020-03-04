@@ -12,7 +12,8 @@ export class RaceService {
     this.raceList = [
       new Race('2020-08-22', 'Leadville Trail 100mi', '', 'https://www.leadvilleraceseries.com/run/leadvilletrail100run/'),
       new Race('2020-06-06', 'North Fork 50mi', '', 'http://www.northfork50.com/'),
-      new Race('2020-02-15', 'Black Canyon 100K', '', 'https://aravaiparunning.com/network/blackcanyon/'),
+      new Race('2020-02-21', 'Akron Campbell Invitational - Mile', '4:58.6', '/assets/results/ac2020.pdf'),
+      new Race('2020-02-15', 'Black Canyon 100K', '12:03:26', 'https://ultrasignup.com/results_event.aspx?did=67039'),
       new Race('2019-12-08', 'California International Marathon', 'DNF', 'https://runsra.org/california-international-marathon/'),
       new Race('2019-11-09', 'Mountain View Trail Half Marathon', '1:25:58', 'https://ultrasignup.com/results_event.aspx?did=68598'),
       new Race('2019-10-12', 'Antelope Island 5K', '17:40', 'https://www.webscorer.com/racedetails?raceid=199355&did=221435'),

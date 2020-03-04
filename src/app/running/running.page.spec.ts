@@ -41,6 +41,7 @@ describe('RunningPage', () => {
     expect(raceServiceSpy.getRaces).toHaveBeenCalled();
     expect(component.listExpanded).toBe(false);
     expect(component.filterText).toBe(null);
+    expect(platformSpy.is).toHaveBeenCalledWith('mobile');
   });
 
   it('expands the race list', () => {
@@ -63,10 +64,5 @@ describe('RunningPage', () => {
     expect(component.showShowMore()).toBe(false);
     component.initialLength = 2;
     expect(component.showShowMore()).toBe(true);
-  });
-
-  it('knows when the app is loaded in mobile', () => {
-    component.isMobile();
-    expect(platformSpy.is).toHaveBeenCalledWith('mobile');
   });
 });

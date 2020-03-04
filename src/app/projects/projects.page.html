@@ -2,18 +2,18 @@
 <ion-content>
     <ion-card color="tertiary">
       <ion-card-header>
-        <ion-card-title *ngIf="!isMobile()">{{descText}}</ion-card-title>
-        <ion-card-subtitle *ngIf="isMobile()">{{descText}}</ion-card-subtitle>
+        <ion-card-title *ngIf="!isMobile">{{descText}}</ion-card-title>
+        <ion-card-subtitle *ngIf="isMobile">{{descText}}</ion-card-subtitle>
       </ion-card-header>
       <ion-list lines="inset">
         <ng-container >
           <ion-item *ngFor="let project of projectList">
-            <ion-avatar slot="start" [ngClass]="{'big-avatar': !isMobile()}">
+            <ion-avatar slot="start" [ngClass]="{'big-avatar': !isMobile}">
               <img src="/assets/img/{{project.imagePath}}">
             </ion-avatar>
             <ion-label class="ion-text-wrap">
               <ion-text>
-                <h2 *ngIf="isMobile()">
+                <h2 *ngIf="isMobile">
                   {{project.displayName}}
                   <span>
                     <a *ngIf="project.hasGithub()" href="{{project.githubUrl}}" target="_blank">
@@ -27,7 +27,7 @@
                     </a>
                   </span>
                 </h2>
-                <h1 *ngIf="!isMobile()">
+                <h1 *ngIf="!isMobile">
                   {{project.displayName}}
                   <span>
                     <a *ngIf="project.hasGithub()" href="{{project.githubUrl}}" target="_blank">

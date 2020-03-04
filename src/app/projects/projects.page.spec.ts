@@ -37,10 +37,6 @@ describe('ProjectsPage', () => {
   it('gets the project list on init', () => {
     component.ngOnInit();
     expect(projectServiceSpy.getProjects).toHaveBeenCalled();
-  });
-
-  it('knows if the app is loaded in mobile', () => {
-    component.isMobile();
     expect(platformSpy.is).toHaveBeenCalledWith('mobile');
   });
 });

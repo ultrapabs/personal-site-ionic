@@ -18,6 +18,7 @@ export class RunningPage {
   filterText: string;
   initialLength: number =  5;
   raceFilterPipe: RaceFilterPipe = new RaceFilterPipe();
+  isMobile: boolean;
 
   constructor(
     private platform: Platform,
@@ -28,10 +29,7 @@ export class RunningPage {
     this.raceList = this.raceService.getRaces();
     this.listExpanded = false;
     this.filterText = null;
-  }
-
-  isMobile() {
-    return this.platform.is('mobile');
+    this.isMobile = this.platform.is('mobile');
   }
 
   expandList() {

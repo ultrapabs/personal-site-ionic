@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { Observable, of } from 'rxjs';
 
 import { RedirectService } from './redirect.service';
 

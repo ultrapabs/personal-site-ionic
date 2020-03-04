@@ -34,13 +34,10 @@ describe('HomePage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('checks for query parameters to redirect on init', () => {
-    component.isMobile();
-    expect(redirectSpy.checkUrlAndRedirect).toHaveBeenCalled();
-  });
+  it('checks for query parameters to redirect on init and sets if mobile', () => {
+    component.ngOnInit();
 
-  it('knows if the app is loaded in mobile', () => {
-    component.isMobile();
     expect(platformSpy.is).toHaveBeenCalledWith('mobile');
+    expect(redirectSpy.checkUrlAndRedirect).toHaveBeenCalled();
   });
 });

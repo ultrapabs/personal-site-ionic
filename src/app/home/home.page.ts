@@ -11,6 +11,7 @@ export class HomePage implements OnInit {
 
   pageTitle: string = 'Paul Banel';
   descText: string = 'I am an ultra runner and software developer based in Boulder, CO';
+  isMobile: boolean;
 
   constructor(
     private platform: Platform,
@@ -18,11 +19,8 @@ export class HomePage implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.isMobile = this.platform.is('mobile');
     this.redirectService.checkUrlAndRedirect();
-  }
-
-  isMobile() {
-    return this.platform.is('mobile');
   }
 
 }

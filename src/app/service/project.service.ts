@@ -11,6 +11,22 @@ export class ProjectService {
   constructor() {
     this.projectList = [
       new Project(
+        'Rough Trail Photos',
+        'Race photography website built with Angular on the Ionic framework. Hosted as a static site on an AWS S3 bucket.',
+        'rtp_preview.png',
+        null,
+        'https://www.roughtrailphotos.com',
+        null
+      ),
+      new Project(
+        'This Site',
+        'This site was built with Angular on the Ionic framework.',
+        'pb_preview.png',
+        'https://github.com/ultrapabs/personal-site-ionic',
+        'https://www.paulbanel.com',
+        null
+      ),
+      new Project(
         'Runlogr',
         'Inspired by Flotrackr, Runlogr allows runners to track their mileage, blog about their training, and create social interactions with other users. Built on Rails using JavaScript and Backbone.js.',
         'runlogr_preview.png',

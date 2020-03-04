@@ -4,7 +4,7 @@
 * Deployed as a static site using [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
 
-### To test
+### To Test
 1. Run `ng test` from root.
 
 ### To Deploy
