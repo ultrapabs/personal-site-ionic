@@ -10,7 +10,7 @@ import { RedirectService } from '../service/redirect.service';
 export class HomePage implements OnInit {
 
   pageTitle: string = 'Paul Banel';
-  descText: string = 'I am an ultra runner and software developer based in Boulder, CO';
+  descText: string = 'I am an ultra runner and software developer based in Colorado';
   isMobile: boolean;
 
   constructor(

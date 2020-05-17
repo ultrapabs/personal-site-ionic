@@ -11,6 +11,14 @@ export class ProjectService {
   constructor() {
     this.projectList = [
       new Project(
+        'Jigsaw Chef',
+        'An app for searching and filtering recipes by selected ingredient(s). Built with Angular on the Ionic framework and hosted as a static site on an AWS S3 bucket.',
+        'jsc_preview.png',
+        'https://github.com/ultrapabs/jigsaw-chef',
+        'https://www.jigsawchef.com',
+        null
+      ),
+      new Project(
         'Rough Trail Photos',
         'Race photography website built with Angular on the Ionic framework. Hosted as a static site on an AWS S3 bucket.',
         'rtp_preview.png',
