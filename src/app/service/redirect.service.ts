@@ -9,7 +9,8 @@ export class RedirectService {
   allowedRoutes: string[] = [
     'home',
     'projects',
-    'running'
+    'running',
+    'hlct-fkt'
   ];
   alreadyRedirected: boolean;
 
