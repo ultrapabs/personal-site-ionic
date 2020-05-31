@@ -22,7 +22,7 @@ export class ProjectsPage implements OnInit {
 
   ngOnInit() {
     this.projectList = this.projectService.getProjects();
-    this.isMobile = this.platform.is('mobile');;
+    this.isMobile = this.platform.is('mobile');
   }
 
 }

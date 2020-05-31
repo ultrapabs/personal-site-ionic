@@ -4,14 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HlctFktPageRoutingModule } from './hlct-fkt-routing.module';
 import { HlctFktPage } from './hlct-fkt.page';
+import { HeaderBarModule } from '../header-bar/header-bar.module';
+import { AgmCoreModule } from '@agm/core';
+import { environment } from '../../environments/environment';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HlctFktPageRoutingModule
+    HeaderBarModule,
+    HlctFktPageRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment['googleMapKey']
+    })
   ],
-  declarations: [HlctFktPage]
+  declarations: [
+    HlctFktPage
+  ]
 })
 export class HlctFktPageModule {}

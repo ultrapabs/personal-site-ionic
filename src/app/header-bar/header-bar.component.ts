@@ -9,6 +9,7 @@ import { HeaderLink } from '../model/header-link';
 export class HeaderBarComponent {
 
   @Input() pageTitle: string;
+  @Input() showSocial: boolean;
   headerLinks: HeaderLink[] = [
     new HeaderLink('https://www.linkedin.com/in/paulbanel/', 'linkedin'),
     new HeaderLink('https://www.github.com/ultrapabs/', 'github'),

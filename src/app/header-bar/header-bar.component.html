@@ -3,7 +3,7 @@
     <ion-title>
       {{pageTitle}}
     </ion-title>
-    <ion-buttons slot="end">
+    <ion-buttons slot="end" *ngIf="showSocial">
       <ion-button *ngFor="let link of headerLinks" color="light" href="{{link.url}}" target="_blank">
         <ion-icon name="logo-{{link.icon}}">
         </ion-icon>
