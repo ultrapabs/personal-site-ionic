@@ -8,7 +8,8 @@
       "zIndex": 0,
       "mile": 0,
       "toNext": 5.5,
-      "desc": "Parking lot off Waterton at trailhead. It is about mile 1.5 of the canal, so any mile marker you see will be about that much ahead of the route distance. At mile 4.3 or so, you will need to cross the canal on your right onto Wagonwheel Drive. There are some construction signs and a well-worn path. Turn left onto Roxborough at the T."
+      "desc": "Parking lot off Waterton at trailhead. It is about mile 1.5 of the canal, so any mile marker you see will be about that much ahead of the route distance. At mile 4.3 or so, you will need to cross the canal on your right onto Wagonwheel Drive. There are some construction signs and a well-worn path. Turn left onto Roxborough at the T.",
+      "googleMapLink": "https://goo.gl/maps/MyaCuF5cJrhowf8s8"
     },
     {
       "lat": 39.52926400318412,
@@ -18,7 +19,8 @@
       "zIndex": 1,
       "mile": 5.5,
       "toNext": 7.5,
-      "desc": "Parking lot with toilet at trail crossing. Route comes north up Roxborough for construction detour to join back on trail here. Follow trail to Titan Road and take a left, then hug the left/west side of the road up 85 until a crossing back to the trail at about mile 9.5. There is a missing bridge but a well-worn path across the canal, and on the other side a sign that marks the high line trail clearly. From here to deKoevend there are a few highway crossings, and some do not have traffic signals."
+      "desc": "Parking lot with toilet at trail crossing. Route comes north up Roxborough for construction detour to join back on trail here. Follow trail to Titan Road and take a left, then hug the left/west side of the road up 85 until a crossing back to the trail at about mile 9.5. There is a missing bridge but a well-worn path across the canal, and on the other side a sign that marks the High Line trail clearly. From here to deKoevend there are a few highway crossings, and some do not have traffic signals.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.52926,-105.05438"
     },
     {
       "lat": 39.55039373577256,
@@ -28,7 +30,8 @@
       "zIndex": 2,
       "mile": 13,
       "toNext": 5,
-      "desc": "Parking at Redstone, but the trail is about 400m away, to the northeast across Town Center Dr, down a hill and across a foot bridge. Bathrooms at the park."
+      "desc": "Parking at Redstone, but the trail is about 400m away, to the northeast across Town Center Dr, down a hill and across a foot bridge. Bathrooms at the park.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.55039,-105.02367"
     },
     {
       "lat": 39.57216011341848,
@@ -38,7 +41,8 @@
       "zIndex": 3,
       "mile": 18,
       "toNext": 7,
-      "desc": "Parking on the northeast side of the park, or street parking nearby. Also a crossing light here that you might need to wait for traffic."
+      "desc": "Parking on the northeast side of the park, or street parking nearby. Also a crossing light here that you might need to wait for traffic.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.57216,-105.01036"
     },
     {
       "lat": 39.599690499393546,
@@ -48,7 +52,8 @@
       "zIndex": 4,
       "mile": 25,
       "toNext": 10,
-      "desc": "Parking lot with a foot bridge to cross over to the trail. Large park with bathrooms."
+      "desc": "Parking lot with a foot bridge to cross over to the trail. Large park with bathrooms.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.59969,-104.95820"
     },
     {
       "lat": 39.642711250694155,
@@ -58,7 +63,8 @@
       "zIndex": 5,
       "mile": 35,
       "toNext": 6.5,
-      "desc": "Parking along Colorado Ave, near where the trail crosses the road."
+      "desc": "Parking along Colorado Ave, near where the trail crosses the road.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.64271,-104.94068"
     },
     {
       "lat": 39.66752346828126,
@@ -68,17 +74,19 @@
       "zIndex": 6,
       "mile": 41.5,
       "toNext": 5.5,
-      "desc": "Not sure on this one, but there should be a lot or street parking nearby."
+      "desc": "Not sure on this one, but there should be a lot or street parking nearby.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.66752,-104.90484"
     },
     {
       "lat": 39.69655196039469,
       "lng": -104.89754765351269,
-      "title": "Missippi @ Parker",
+      "title": "Mississippi @ Parker",
       "label": "7",
       "zIndex": 7,
       "mile": 47,
       "toNext": 5.5,
-      "desc": "Not sure on this one either, but there is a 7-11 nearby. The route goes north across Parker."
+      "desc": "Not sure on this one either, but there is a 7-11 nearby. The route goes north across Parker.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.69655,-104.89754"
     },
     {
       "lat": 39.71791886560855,
@@ -88,7 +96,8 @@
       "zIndex": 8,
       "mile": 52.5,
       "toNext": 7.5,
-      "desc": "There is a light rail station here and a few parking lots. Route goes east under the I-225 overpass."
+      "desc": "There is a light rail station here and a few parking lots. Route goes east under the I-225 overpass.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.71791,-104.82599"
     },
     {
       "lat": 39.740047281353704,
@@ -98,7 +107,8 @@
       "zIndex": 9,
       "mile": 58,
       "toNext": 2,
-      "desc": "This is where a lot of highway crossings and potential confusing turns start. Not much parking, but cutting the course it is about a mile jog down Colfax for the pacer from the next crew spot."
+      "desc": "This is where a lot of highway crossings and potential confusing turns start. Not much parking, but cutting the course it is about a mile jog down Colfax for the pacer from the next crew spot.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.74004,-104.79741"
     },
     {
       "lat": 39.738902081488895,
@@ -108,7 +118,8 @@
       "zIndex": 10,
       "mile": 60,
       "toNext": 6,
-      "desc": "Parking lot with toilet (I think). The trail goes across Colfax to the north, near the 7-11, then weaves back and forth a couple times across Tower until you detour across I-70 on Tower, turn right on 32nd, then hop back on the trail at a crosswalk with a light that takes you north."
+      "desc": "Parking lot with toilet. The trail goes across Colfax to the north, near the 7-11, then weaves back and forth a couple times across Tower until you detour across I-70 on Tower, turn right on 32nd, then hop back on the trail at a crosswalk with a light that takes you north.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.73890,-104.77713"
     },
     {
       "lat": 39.779194964533474,
@@ -118,7 +129,8 @@
       "zIndex": 11,
       "mile": 66,
       "toNext": 0,
-      "desc": "There is a lot not too far from the finish on Perth, or street parking in the neighborhoods. The route ends at Picadilly."
+      "desc": "There is a lot not too far from the finish on Perth, or street parking in the neighborhoods. The route ends at Picadilly.",
+      "googleMapLink": "https://www.google.com/maps/search/?api=1&query=39.77919,-104.73481"
     }
   ]
 }

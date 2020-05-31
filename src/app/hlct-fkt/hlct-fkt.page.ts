@@ -134,10 +134,6 @@ export class HlctFktPage implements OnInit {
   toggleMarkers() {
     this.showMarkers = !this.showMarkers;
   }
-
-  showMe(event: any) {
-    console.log(event);
-  }
 }
 
 interface AidStation {
@@ -149,4 +145,5 @@ interface AidStation {
   mile: number;
   toNext: number;
   desc: string;
+  googleMapLink: string;
 }

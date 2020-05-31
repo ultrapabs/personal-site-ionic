@@ -77,10 +77,17 @@
         {{showMarkers ? 'Hide' : 'Show'}} Crew Markers
       </ion-button>
     </ion-card-content>
+    <ion-card-content class="fkt-link">
+      Route adapted from GPX file
+      <a href="https://fastestknowntime.com/route/high-line-canal-trail-co" target="_blank">here</a>.
+    </ion-card-content>
   </ion-card>
   <ion-card *ngFor="let aid of aidMarkerList">
     <ion-card-header>
       <ion-card-title>{{aid.title}}</ion-card-title>
+      <ion-card-subtitle>
+        <a href="{{aid.googleMapLink}}" target="_blank">Google Map Link</a>
+      </ion-card-subtitle>
       <ion-card-subtitle>Marker: {{aid.label}}</ion-card-subtitle>
       <ion-card-subtitle>Approximate mile: {{aid.mile}}</ion-card-subtitle>
       <ion-card-subtitle>To next: {{aid.toNext}}</ion-card-subtitle>
