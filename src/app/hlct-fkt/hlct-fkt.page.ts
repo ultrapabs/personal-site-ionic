@@ -34,7 +34,6 @@ export class HlctFktPage implements OnInit {
   showDetour: boolean;
 
   aidMarkerList: any[];
-  markersReady: boolean;
   showMarkers: boolean;
 
   constructor(

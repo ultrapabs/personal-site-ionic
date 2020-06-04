@@ -4,7 +4,6 @@
   <ion-card color="tertiary">
     <ion-card-content>
       <agm-map [ngClass]="{'mobile-view': isMobile, 'desktop-view': !isMobile}"
-               (mapClick)="showMe($event)"
                [latitude]="startLat"
                [longitude]="startLng"
                [zoom]="startZoom"
