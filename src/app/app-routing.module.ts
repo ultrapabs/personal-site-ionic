@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'projects',
     loadChildren: './projects/projects.module#ProjectsPageModule'
+  },
+  {
+    path: 'hlct-fkt',
+    loadChildren: () => import('./hlct-fkt/hlct-fkt.module').then( m => m.HlctFktPageModule)
   }
 ];
 @NgModule({

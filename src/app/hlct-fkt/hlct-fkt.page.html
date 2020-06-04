@@ -1,0 +1,94 @@
+<app-header-bar [pageTitle]="pageTitle" [showSocial]="false"></app-header-bar>
+
+<ion-content>
+  <ion-card color="tertiary">
+    <ion-card-content>
+      <agm-map [ngClass]="{'mobile-view': isMobile, 'desktop-view': !isMobile}"
+               [latitude]="startLat"
+               [longitude]="startLng"
+               [zoom]="startZoom"
+               [streetViewControl]="false"
+               [controlSize]="24">
+        <ng-container *ngIf="showMarkers">
+          <agm-marker *ngFor="let mrk of aidMarkerList"
+                      [latitude]="mrk.lat"
+                      [longitude]="mrk.lng"
+                      [title]="mrk.title"
+                      [label]="mrk.label"
+                      [zIndex]="mrk.zIndex">
+          </agm-marker>
+        </ng-container>
+        <agm-polyline *ngIf="showOriginalFkt"
+                      [strokeColor]="originalFktColor"
+                      [strokeWeight]="originalFktWeight"
+                      [zIndex]="1">
+          <ng-container *ngFor="let pt of originalFktPointList">
+            <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+            </agm-polyline-point>
+          </ng-container>
+        </agm-polyline>
+        <agm-polyline *ngIf="showDetourFkt"
+                      [strokeColor]="detourFktColor"
+                      [strokeWeight]="detourFktWeight"
+                      [zIndex]="2">
+          <ng-container *ngFor="let pt of detourFktPointList">
+            <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+            </agm-polyline-point>
+          </ng-container>
+        </agm-polyline>
+        <ng-container *ngIf="showDetour">
+          <agm-polyline [strokeColor]="detourColor" [strokeWeight]="detourWeight">
+            <ng-container *ngFor="let pt of detourOnePointList">
+              <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+              </agm-polyline-point>
+            </ng-container>
+          </agm-polyline>
+          <agm-polyline [strokeColor]="detourColor" [strokeWeight]="detourWeight">
+            <ng-container *ngFor="let pt of detourTwoPointList">
+              <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+              </agm-polyline-point>
+            </ng-container>
+          </agm-polyline>
+          <agm-polyline [strokeColor]="detourColor" [strokeWeight]="detourWeight">
+            <ng-container *ngFor="let pt of detourThreePointList">
+              <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+              </agm-polyline-point>
+            </ng-container>
+          </agm-polyline>
+        </ng-container>
+      </agm-map>
+    </ion-card-content>
+    <ion-card-content class="path-toggle">
+      <ion-button color="secondary" size="small" (click)="toggleOriginalFkt()">
+        {{showOriginalFkt ? 'Hide' : 'Show'}} Original Route
+      </ion-button>
+      <ion-button color="secondary" size="small" (click)="toggleDetourFkt()">
+        {{showDetourFkt ? 'Hide' : 'Show'}} Detour Route
+      </ion-button>
+      <ion-button color="secondary" size="small" (click)="toggleDetour()">
+        {{showDetour ? 'Hide' : 'Show'}} Detour Only
+      </ion-button>
+      <ion-button color="secondary" size="small" (click)="toggleMarkers()">
+        {{showMarkers ? 'Hide' : 'Show'}} Crew Markers
+      </ion-button>
+    </ion-card-content>
+    <ion-card-content class="fkt-link">
+      Route adapted from GPX file
+      <a href="https://fastestknowntime.com/route/high-line-canal-trail-co" target="_blank">here</a>.
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngFor="let aid of aidMarkerList">
+    <ion-card-header>
+      <ion-card-title>{{aid.title}}</ion-card-title>
+      <ion-card-subtitle>
+        <a href="{{aid.googleMapLink}}" target="_blank">Google Map Link</a>
+      </ion-card-subtitle>
+      <ion-card-subtitle>Marker: {{aid.label}}</ion-card-subtitle>
+      <ion-card-subtitle>Approximate mile: {{aid.mile}}</ion-card-subtitle>
+      <ion-card-subtitle>To next: {{aid.toNext}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{aid.desc}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
