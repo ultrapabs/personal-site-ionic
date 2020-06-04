@@ -19,7 +19,7 @@
                       [zIndex]="mrk.zIndex">
           </agm-marker>
         </ng-container>
-        <agm-polyline *ngIf="originalFktReady && showOriginalFkt"
+        <agm-polyline *ngIf="showOriginalFkt"
                       [strokeColor]="originalFktColor"
                       [strokeWeight]="originalFktWeight"
                       [zIndex]="1">
@@ -28,7 +28,7 @@
             </agm-polyline-point>
           </ng-container>
         </agm-polyline>
-        <agm-polyline *ngIf="detourFktReady && showDetourFkt"
+        <agm-polyline *ngIf="showDetourFkt"
                       [strokeColor]="detourFktColor"
                       [strokeWeight]="detourFktWeight"
                       [zIndex]="2">
@@ -37,30 +37,26 @@
             </agm-polyline-point>
           </ng-container>
         </agm-polyline>
-        <agm-polyline *ngIf="detourReady && showDetour"
-                      [strokeColor]="detourColor"
-                      [strokeWeight]="detourWeight">
-          <ng-container *ngFor="let pt of detourOnePointList">
-            <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
-            </agm-polyline-point>
-          </ng-container>
-        </agm-polyline>
-        <agm-polyline *ngIf="detourReady && showDetour"
-                      [strokeColor]="detourColor"
-                      [strokeWeight]="detourWeight">
-          <ng-container *ngFor="let pt of detourTwoPointList">
-            <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
-            </agm-polyline-point>
-          </ng-container>
-        </agm-polyline>
-        <agm-polyline *ngIf="detourReady && showDetour"
-                      [strokeColor]="detourColor"
-                      [strokeWeight]="detourWeight">
-          <ng-container *ngFor="let pt of detourThreePointList">
-            <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
-            </agm-polyline-point>
-          </ng-container>
-        </agm-polyline>
+        <ng-container *ngIf="showDetour">
+          <agm-polyline [strokeColor]="detourColor" [strokeWeight]="detourWeight">
+            <ng-container *ngFor="let pt of detourOnePointList">
+              <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+              </agm-polyline-point>
+            </ng-container>
+          </agm-polyline>
+          <agm-polyline [strokeColor]="detourColor" [strokeWeight]="detourWeight">
+            <ng-container *ngFor="let pt of detourTwoPointList">
+              <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+              </agm-polyline-point>
+            </ng-container>
+          </agm-polyline>
+          <agm-polyline [strokeColor]="detourColor" [strokeWeight]="detourWeight">
+            <ng-container *ngFor="let pt of detourThreePointList">
+              <agm-polyline-point [latitude]="pt.lat" [longitude]="pt.lng">
+              </agm-polyline-point>
+            </ng-container>
+          </agm-polyline>
+        </ng-container>
       </agm-map>
     </ion-card-content>
     <ion-card-content class="path-toggle">

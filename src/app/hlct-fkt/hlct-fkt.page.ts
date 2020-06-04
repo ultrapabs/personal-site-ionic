@@ -18,13 +18,11 @@ export class HlctFktPage implements OnInit {
 
   originalFktPointList: LatLngLiteral[];
   originalFktColor: string = '#FF0000';
-  originalFktReady: boolean;
   originalFktWeight: number = 6;
   showOriginalFkt: boolean;
 
   detourFktPointList: LatLngLiteral[];
   detourFktColor: string = '#0000FF';
-  detourFktReady: boolean;
   detourFktWeight: number = 2;
   showDetourFkt: boolean;
 
@@ -32,12 +30,11 @@ export class HlctFktPage implements OnInit {
   detourTwoPointList: LatLngLiteral[];
   detourThreePointList: LatLngLiteral[];
   detourColor: string = '#0000FF';
-  detourReady: boolean;
   detourWeight: number = 5;
   showDetour: boolean;
 
   aidMarkerList: any[];
-  markerColor: string = 'F04141';
+  markersReady: boolean;
   showMarkers: boolean;
 
   constructor(
@@ -53,9 +50,6 @@ export class HlctFktPage implements OnInit {
     this.detourTwoPointList = [];
     this.detourThreePointList = [];
     this.aidMarkerList = [];
-    this.originalFktReady = false;
-    this.detourFktReady = false;
-    this.detourReady = false;
     this.showOriginalFkt = true;
     this.showDetourFkt = true;
     this.showDetour = true;
@@ -74,10 +68,9 @@ export class HlctFktPage implements OnInit {
     this.apiService.getJsonData('hlct_fkt').subscribe(
       (response) => {
         this.originalFktPointList = response['pointList'];
-        this.originalFktReady = true;
       },
       (error) => {
-        console.log(error);
+        console.error(error);
       }
     );
   }
@@ -86,10 +79,9 @@ export class HlctFktPage implements OnInit {
     this.apiService.getJsonData('hlct_with_detour').subscribe(
       (response) => {
         this.detourFktPointList = response['pointList'];
-        this.detourFktReady = true;
       },
       (error) => {
-        console.log(error);
+        console.error(error);
       }
     );
   }
@@ -100,10 +92,9 @@ export class HlctFktPage implements OnInit {
         this.detourOnePointList = response['pointListOne'];
         this.detourTwoPointList = response['pointListTwo'];
         this.detourThreePointList = response['pointListThree'];
-        this.detourReady = true;
       },
       (error) => {
-        console.log(error);
+        console.error(error);
       }
     );
   }
@@ -114,7 +105,7 @@ export class HlctFktPage implements OnInit {
         this.aidMarkerList = response['stations'];
       },
       (error) => {
-        console.log(error);
+        console.error(error);
       }
     );
   }
