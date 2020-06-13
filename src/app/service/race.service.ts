@@ -10,7 +10,6 @@ export class RaceService {
 
   constructor() {
     this.raceList = [
-      new Race('2020-06-06', 'High Line Canal Trail FKT Attempt', '', '/hlct-fkt'),
       new Race('2020-02-21', 'Akron Campbell Invitational - Mile', '4:58.6', '/assets/results/ac2020.pdf'),
       new Race('2020-02-15', 'Black Canyon 100K', '12:03:26', 'https://ultrasignup.com/results_event.aspx?did=67039'),
       new Race('2019-12-08', 'California International Marathon', 'DNF', 'https://runsra.org/california-international-marathon/'),
